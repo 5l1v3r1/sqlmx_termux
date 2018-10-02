@@ -56,6 +56,11 @@ def sqlmx():
    print("\u001b[32m ")
    print("[*] INJECTING CODE...")
    os.system('sleep 2')
+   print(" ")
+   print("\u001b[0m[*] IF YOU SEE A SQL SYNTAX ERROR")
+   os.system('sleep 1')
+   print("[*] THAT NOTICES YOU A VULNERABILITY")
+   os.system('sleep 2')
    if(inject==1):
      try:
          inject="/index.php?id='"
