@@ -51,14 +51,6 @@ def sqlmx():
    except KeyboardInterrupt:
        screen()
        select()
-#VULNERABLE DOMAIN DISCOVERY...
-def vuln():
-   try:
-       url='https://www.google.com/search?q=index.php?id='
-       webbrowser.open(url)
-   except KeyboardInterrupt:
-       screen()
-       select()
 #UPDATE AREA...
 def update():
    try:
@@ -87,9 +79,89 @@ def select():
    if(choose==1):
      sqlmx()
    elif(choose==2):
-     vuln()
+     dorks()
    elif(choose==0):
      update()
+   else:
+     print("\u001b[31m[*] WRONG OPTION...")
+#DORK SELECTING...
+def dorks():
+   print("\u001b[31m///////////////////////////////////")
+   print("\u001b[0m[1] index.php?id=")
+   print("[2] files.php?id=")
+   print("[3] shop.php?id=")
+   print("[4] buy.php?category=")
+   print("[5] trainers.php?id=")
+   print("[6] games.php?id=")
+   print("[7] page.php?file=")
+   print("[8] gallery.php?id=")
+   print("[9] show.php?id=")
+   print(" ")
+   dorking=int(input("SELECT YOUR DORK: "))
+   print("\u001b[31m///////////////////////////////////")
+   if(dorking==1):
+     try:
+         url='https://www.google.com/search?q=index.php?id='
+         webbrowser.open(url)
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(dorking==2):
+     try:
+         url='https://www.google.com/search?q=files.php?id='
+         webbrowser.open(url)
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(dorking==3):
+     try:
+         url='https://www.google.com/search?q=shop.php?id='
+         webbrowser.open(url)
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(dorking==4):
+     try:
+         url='https://www.google.com/search?q=buy.php?category='
+         webbrowser.open(url)
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(dorking==5):
+     try:
+         url='https://www.google.com/search?q=trainers.php?id='
+         webbrowser.open(url)
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(dorking==6):
+     try:
+         url='https://www.google.com/search?q=games.php?id='
+         webbrowser.open(url)
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(dorking==7):
+     try:
+         url='https://www.google.com/search?q=page.php?file='
+         webbrowser.open(url)
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(dorking==8):
+     try:
+         url='https://www.google.com/search?q=gallery.php?id='
+         webbrowser.open(url)
+     except KeyboardInterrupt:
+         screen()
+         select()
+   elif(dorking==9):
+     try:
+         url='https://www.google.com/search?q=show.php?id='
+         webbrowser.open(url)
+     except KeyboardInterrupt:
+         screen()
+         select()
    else:
      print("\u001b[31m[*] WRONG OPTION...")
 #WHOLE PROGRAM IN HERE...
