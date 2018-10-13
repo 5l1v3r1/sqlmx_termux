@@ -16,17 +16,71 @@ def screen():
    print("         《               SQL INJECTOR                》")
    print('         《___________________________________________》')
    print(" ")
+#OPERATING SYSTEM SELECT AREA...
+def osselect():
+   os.system('clear')
+   print("\u001b[36m[*] SELECT YOUR O.S. TYPE TO GET LYNX")
+   print("\u001b[0m ")
+   print("[1] KALI LINUX")
+   print("[2] ARCH LINUX")
+   print("[3] REDHAT LINUX")
+   print("[4] UBUNTU")
+   osx=int(input("CHOOSE: "))
+   if(osx==1):
+     try:
+         print("\u001b[32m ")
+         print("[+] DOWNLOAD STARTS YOU HAVE 5 SECONDS TO ABORT...")
+         os.system('sleep 5')
+         os.system('apt-get install lynx')
+         os.system('sleep 1')
+         print("\u001b[32m[*] DOWNLOAD COMPLETED...")
+     except KeyboardInterrupt:
+         print("\u001b[31m[!] DOWNLOAD ABORTED...")
+         os.system('sleep 2')
+   elif(osx==2):
+     try:
+         print("\u001b[32m ")
+         print("[+] DOWNLOAD STARTS YOU HAVE 5 SECONDS TO ABORT...")
+         os.system('sleep 5')
+         os.system('pacman -S lynx')
+         os.system('sleep 1')
+         print("\u001b[32m[*] DOWNLOAD COMPLETED...")
+     except KeyboardInterrupt:
+         print("\u001b[31m[!] DOWNLOAD ABORTED...")
+         os.system('sleep 2')
+   elif(osx==3):
+     try:
+         print("\u001b[32m ")
+         print("[+] DOWNLOAD STARTS YOU HAVE 5 SECONDS TO ABORT...")
+         os.system('sleep 5')
+         os.system('yum install lynx')
+         os.system('sleep 1')
+         print("\u001b[32m[*] DOWNLOAD COMPLETED...")
+     except KeyboardInterrupt:
+         print("\u001b[31m[!] DOWNLOAD ABORTED...")
+         os.system('sleep 2')
+   elif(osx==4):
+     try:
+         print("\u001b[32m ")
+         print("[+] DOWNLOAD STARTS YOU HAVE 5 SECONDS TO ABORT...")
+         os.system('sleep 5')
+         os.system('apt-get install lynx')
+         os.system('sleep 1')
+         print("\u001b[32m[*] DOWNLOAD COMPLETED...")
+     except KeyboardInterrupt:
+         print("\u001b[31m[!] DOWNLOAD ABORTED...")
+         os.system('sleep 2')
+   else:
+     print("\u001b[31m[!] WRONG OPTION...")
 #LYNX INSTALLER...
 def lynx():
-   print("\u001b[36m[!] ALERT THIS PROGRAM NEEDS LYNX BROWSER")
+   os.system('clear')
+   print("\u001b[31m[!] ALERT THIS PROGRAM NEEDS LYNX BROWSER")
+   print("\u001b[36m ")
    print("[*] IF YOU ALREADY HAVE SELECT [0]!!")
    lyn=int(input("DO YOU WANNA INSTALL [1/0] ?: "))
    if(lyn==1):
-     os.system('pkg install lynx')
-     print(" ")
-     print("\u001b[32m[*] DOWNLOAD COMPLETED...")
-     os.system('sleep 2')
-     os.system("clear")
+     osselect()
    elif(lyn==0):
      os.system('clear')
    else:
